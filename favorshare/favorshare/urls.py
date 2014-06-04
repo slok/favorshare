@@ -1,12 +1,20 @@
 from django.conf.urls import patterns, include, url
-
 from django.contrib import admin
+
+from profiles import urls as profile_urls
+
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'favorshare.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
+    # Django default admin
     url(r'^admin/', include(admin.site.urls)),
+
+    # User profiles
+    url(r'p/', include(profile_urls,
+        namespace="profiles",
+        app_name="profiles"),
+    )
+
 )
