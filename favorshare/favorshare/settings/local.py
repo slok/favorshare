@@ -17,3 +17,16 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+INTERNAL_IPS = (
+    "10.0.2.2",  # Vagrant use (Virtual box default gateway)
+    "127.0.0.1",
+)
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+)
+
+MIDDLEWARE_CLASSES += (
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+)
