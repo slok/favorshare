@@ -1,5 +1,7 @@
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
 DJANGO_APPS = (
@@ -16,6 +18,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    "homepage",
     "profiles",
 )
 
@@ -42,5 +45,14 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, "templates"),
+)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
 
 AUTH_USER_MODEL = 'profiles.User'
