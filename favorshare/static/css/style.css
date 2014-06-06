@@ -1,0 +1,7 @@
+.green-button {
+    background-color: #27ae61;
+}
+
+.green-button:hover {
+    background-color: #2fc26f;
+}
