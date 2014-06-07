@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     {% block stylesheets %}
+        <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
     {% endblock stylesheets%}
@@ -29,7 +30,7 @@
     <div class="header dark-blue-row">
         <div class="container row-4 tablet-row-3 mobile-row-3">
             <div class="clear mobile-text-center">
-              <a href="/base/" class="logo left mobile-no-float uppercase"><span class="icon"></span>Base</a>
+              <a href="/" class="logo left mobile-no-float uppercase"><span class="icon"></span>FavorShare</a>
               <ul class="navigation list-inline right no-mobile">
                 {% block navbar %}
                 <li><a class="active" href="{% url "authentication:login" %}">Login</a></li>
