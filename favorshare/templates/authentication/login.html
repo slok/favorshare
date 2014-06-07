@@ -3,6 +3,11 @@
 
 {% block title %} Login {% endblock title %}
 
+{% block navbar %}
+    {{ block.super }}
+    <li><a href="{% url "profiles:register" %}">Logout</a></li>
+{% endblock navbar %}
+
 {% block content %}
 
     <div class="row clear">
