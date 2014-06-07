@@ -25,9 +25,19 @@
 
   <body>
 
-    {% block navbar %}
-    
-    {% endblock navbar %}
+
+    <div class="header dark-blue-row">
+        <div class="container row-4 tablet-row-3 mobile-row-3">
+            <div class="clear mobile-text-center">
+              <a href="/base/" class="logo left mobile-no-float uppercase"><span class="icon"></span>Base</a>
+              <ul class="navigation list-inline right no-mobile">
+                {% block navbar %}
+                <li><a class="active" href="{% url "authentication:login" %}">Login</a></li>
+                {% endblock navbar %}
+              </ul>
+            </div>
+        </div>
+    </div>
     
     <div class="container mobile-container-full">
     {% block content %}

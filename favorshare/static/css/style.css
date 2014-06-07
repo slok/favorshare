@@ -5,3 +5,8 @@
 .green-button:hover {
     background-color: #2fc26f;
 }
+
+.dark-blue-row {
+    background-color: #212933;
+    color: #fff;
+}
