@@ -5,8 +5,8 @@
 
 {% block navbar %}
     {% if user.is_authenticated %}
-        <li><a class="active" href="/base/">My account</a></li>
-        <li><a class="active" href="{% url "authentication:logout" %}">Logout</a></li>
+        <li><a href="/base/">My account</a></li>
+        <li><a href="{% url "authentication:logout" %}">Logout</a></li>
     {% else %}
         {{ block.super }}
     {% endif %}

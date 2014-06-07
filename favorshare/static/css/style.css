@@ -95,7 +95,8 @@
     padding: 0px;
     position: relative;
     border: 1px solid #ccc;
-    border-radius: 3px;  
+    border-radius: 3px;
+    background-color: #F9FAFB;
 }
 .form-data {
     padding: 20px;
