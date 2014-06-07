@@ -30,11 +30,7 @@ class User(AbstractUser):
     # We could use validator explicitely when we create the attr, but this is
     # inherited from django.auth so we will add this dynamically
     def clean(self):
-
-        # Don't do this! Get the email, can't access by key :/
-        # TODO: Change toa  better way than iterating the field list
-        #       (Add validation to the form only?)
-        email = next((f for f in self._meta.fields if f.name == "email"))
+        email = self._meta.get_field_by_name("email")[0]
         email.validators.append(validate_email_exists)
 
         super(User, self).clean()
