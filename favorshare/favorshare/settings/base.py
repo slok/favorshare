@@ -18,8 +18,10 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    "core",
     "homepage",
     "profiles",
+    "authentication",
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -56,3 +58,4 @@ STATICFILES_DIRS = (
 
 
 AUTH_USER_MODEL = 'profiles.User'
+LOGIN_URL = "authentication:login"
