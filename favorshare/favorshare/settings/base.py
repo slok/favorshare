@@ -22,6 +22,7 @@ LOCAL_APPS = (
     "homepage",
     "profiles",
     "authentication",
+    "favors",
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
