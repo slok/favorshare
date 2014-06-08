@@ -13,14 +13,9 @@ class RegisterView(CreateView):
         return reverse('profiles:detail', args=(self.object.id,))
 
 
-
 class ProfileDetailView(CreateView):
-    model = User
-    fields = ("email", "username", "password")
-    template_name = "profiles/register.html"
+    pass
 
 
 class ProfileEditView(CreateView):
-    model = User
-    fields = ("email", "username", "password")
-    template_name = "profiles/register.html"
+    pass
