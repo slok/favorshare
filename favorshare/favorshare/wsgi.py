@@ -16,7 +16,7 @@ settings_prefix = "favorshare.settings"
 settings = {
     "staging": "staging",
     "stage": "staging",
-    "samdbox": "staging",
+    "sandbox": "staging",
     "production": "production",
     "prod": "production",
     "local": "local",
